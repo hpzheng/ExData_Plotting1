@@ -5,6 +5,9 @@ HHP <- fread("household_power_consumption.txt",na.strings=c("?","NA","null"))
 DT <- subset(HHP,dmy(Date) == dmy('1/2/2007') | dmy(Date) == dmy('2/2/2007'),)
 DF <- data.frame(DT)
 
+#### The following transformation could have been used to simplefy the plotting
+DF <- transform(DF, DateTime = dmy_hms(paste(DF$Date,DF$Time)))
+
 
 
 ## R codes for Plotting
