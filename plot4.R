@@ -9,7 +9,7 @@ c4p1plot <- function(param1,xlab,ylab) {
          xlab=xlab,
          ylab=ylab)
 }
-png(filename="plot4.png", width=480, height=480)
+png(filename="plot4.png", width=480, height=480, bg="transparent")
 par(mfrow=c(2,2))
 
 
