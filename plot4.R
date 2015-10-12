@@ -1,5 +1,6 @@
 ## This script plot line graph of multiple parameters with a given data frame
 ## named DF, in four panels
+source("loaddata.R")
 
 # Opening graphic devices for plotting
 library(lubridate)

@@ -6,6 +6,9 @@
     DT <- subset(HHP,dmy(Date) == dmy('1/2/2007') | dmy(Date) == dmy('2/2/2007'),)  
     DF <- data.frame(DT)
 
+#### The following transformation is an alternative way to subset data
+    DT <- subset(HHP, Date %in% as.Date(c("2007-02-01", "2007-02-02"), "%Y-%m-%d"))
+
 #### The following transformation could have been used to simplify plotting
     DF <- transform(DF, DateTime = dmy_hms(paste(DF$Date,DF$Time)))
 
